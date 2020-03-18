@@ -6,10 +6,9 @@ Readability is rule of thumb.
 
 ## Stack parameters:
 
-
+```
 // RECOMMEND
 
-```
 public View onCreateView(@NonNull LayoutInflater inflater,
                          @Nullable ViewGroup container,
                          @Nullable Bundle savedInstanceState) {
@@ -18,9 +17,10 @@ public View onCreateView(@NonNull LayoutInflater inflater,
             .inflate(R.layout.seeding_form, container, false);
 }
 ```
-// NOT RECOMMEND
 
 ```
+// NOT RECOMMEND
+
 public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
   return LayoutInflater.from(getContext()).inflate(R.layout.seeding_form, container, false);
 }
@@ -79,17 +79,14 @@ for (int i = 0; i < companies.size(); i++) // AVOID
 
 ### IF ELSE / Ternary Operator
 
-// RECOMMEND
-
 ```
-String greeting = isMorning
+String greeting = isMorning    // RECOMMEND
     ? "Good Morning"
     : "Good Night";
 ```
 
-// NOT RECOMMEND
 ```
-String greeting = "";
+String greeting = "";          // NOT RECOMMEND
 if (isMorning) {
     greeting = "Good Morning";
 } else {
@@ -102,10 +99,8 @@ if (isMorning) {
 1. Empty space in between cases.
 2. Include every case.
 
-// RECOMMEND
-
 ```
-int getCalories() {
+int getCalories() {    // RECOMMEND
 
     switch (breakfast) {
         case BACON:
