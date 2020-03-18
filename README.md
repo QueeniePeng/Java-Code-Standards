@@ -7,7 +7,7 @@ Readability is rule of thumb.
 ## Stack parameters:
 
 ```
-// RECOMMEND
+// RIGHT
 
 public View onCreateView(@NonNull LayoutInflater inflater,
                          @Nullable ViewGroup container,
@@ -17,9 +17,8 @@ public View onCreateView(@NonNull LayoutInflater inflater,
             .inflate(R.layout.seeding_form, container, false);
 }
 ```
-
 ```
-// NOT RECOMMEND
+// AVOID
 
 public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
   return LayoutInflater.from(getContext()).inflate(R.layout.seeding_form, container, false);
@@ -80,13 +79,13 @@ for (int i = 0; i < companies.size(); i++) // AVOID
 ### IF ELSE / Ternary Operator
 
 ```
-String greeting = isMorning    // RECOMMEND
+String greeting = isMorning    // RIGHT
     ? "Good Morning"
     : "Good Night";
 ```
 
 ```
-String greeting = "";          // NOT RECOMMEND
+String greeting = "";          // AVOID
 if (isMorning) {
     greeting = "Good Morning";
 } else {
@@ -99,8 +98,11 @@ if (isMorning) {
 1. Empty space in between cases.
 2. Include every case.
 
+
 ```
-int getCalories() {    // RECOMMEND
+// RIGHT
+
+int getCalories() {    
 
     switch (breakfast) {
         case BACON:
@@ -119,9 +121,10 @@ int getCalories() {    // RECOMMEND
 
 ### STRINGS
 
-// RECOMMEND
 
 ```
+// RIGHT
+
 <plurals name="employees_size">
     <item quantity="one">%d employee</item>
     <item quantity="other">%d employees</item>
@@ -134,9 +137,9 @@ setText(getResources().getQuantityString(
     employees.size()));
 
 ```
-// NOT RECOMMEND
-
 ```
+// AVOID
+
 setText(employees.size()
     ? "1 employee"
     : employees.size() + " employees")
@@ -144,7 +147,10 @@ setText(employees.size()
 ```
 
 ### ID
+
 ```
+// RIGHT
+
 TextView:  text_
 ImageView: image_
 Button:    button_
