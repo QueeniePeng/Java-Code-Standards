@@ -55,7 +55,7 @@ List<Employee> employeeList; // AVOID
 
 ### FUNCTION
 
-#### 0. Parameters
+#### 0. PARAMETERS
 ```
 void setEmployee(Employee employee)()  // RIGHT
 
@@ -77,7 +77,7 @@ for (Company company : companies) {}       // RIGHT
 for (int i = 0; i < companies.size(); i++) // AVOID
 ```
 
-#### IF ELSE / Ternary Operator
+### IF ELSE / Ternary Operator
 
 // RECOMMEND
 
@@ -99,13 +99,12 @@ if (isMorning) {
 
 ### SWITCH CASE
 
+1. Empty space in between cases.
+2. Include every case.
+
 // RECOMMEND
 
 ```
-// Empty space in between cases.
-// Include every case.
-// Watch out for fall through
-
 int getCalories() {
 
     switch (breakfast) {
