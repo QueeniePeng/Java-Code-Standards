@@ -4,7 +4,8 @@
 Readability is rule of thumb.
 
 
-### Stack parameters:
+## Stack parameters:
+
 
 // RECOMMEND
 
@@ -29,19 +30,6 @@ public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup c
 
 * Any naming should have <= 3 words
 
-### ENUM
-```
-enum Day {
-    SUNDAY, MONDAY, TUESDAY,
-    WEDNESDAY, THURSDAY, FRIDAY,
-    SATURDAY
-}
-
-setDayType(MONDAY)     // RIGHT
-setVisibility(GONE)    // RIGHT
-
-setDayType(Day.MONDAY) // AVOID
-```
 
 ### BOOLEAN
 
@@ -66,6 +54,8 @@ List<Employee> employeeList; // AVOID
 ```
 
 ### FUNCTION
+
+#### 0. Parameters
 ```
 void setEmployee(Employee employee)()  // RIGHT
 
@@ -73,21 +63,21 @@ void set(Employee e)()                 // AVOID
 void set(Employee employee)()          // AVOID
 ```
 
-##### ON CLICK LISTENER
+#### 1. ON CLICK LISTENER
 ```
 void onAcceptButton() // RIGHT
 
 void acceptPressed()  // AVOID
 ```
 
-##### FOR-LOOP (-)
+#### 2. FOR-LOOP
 ```
 for (Company company : companies) {}       // RIGHT
 
 for (int i = 0; i < companies.size(); i++) // AVOID
 ```
 
-### IF ELSE / Ternary Operator
+#### IF ELSE / Ternary Operator
 
 // RECOMMEND
 
