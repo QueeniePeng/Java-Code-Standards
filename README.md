@@ -33,16 +33,16 @@ public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup c
 ### BOOLEAN
 
 ```
-isSelected   // RIGHT
+isSelected  // RIGHT
 
-setSelected  // AVOID
-selected     // AVOID
+setSelected // AVOID
+selected     
 ```
 ```
-hasHeader      // RIGHT
+hasHeader   // RIGHT
 
-withHeader     // AVOID
-containHeader  // AVOID
+withHeader  // AVOID
+containHeader  
 ```
 
 ### LIST
@@ -56,17 +56,17 @@ List<Employee> employeeList; // AVOID
 
 #### 0. PARAMETERS
 ```
-void setEmployee(Employee employee)()  // RIGHT
+void setEmployee(Employee employee)() // RIGHT
 
-void set(Employee e)()                 // AVOID
-void set(Employee employee)()          // AVOID
+void set(Employee e)()                // AVOID
+void set(Employee employee)()
 ```
 
 #### 1. ON CLICK LISTENER
 ```
-void onAcceptButton() // RIGHT
+void onAcceptButton()// RIGHT
 
-void acceptPressed()  // AVOID
+void acceptPressed() // AVOID
 ```
 
 #### 2. FOR-LOOP
@@ -79,13 +79,13 @@ for (int i = 0; i < companies.size(); i++) // AVOID
 ### IF ELSE / Ternary Operator
 
 ```
-String greeting = isMorning    // RIGHT
+String greeting = isMorning // RIGHT
     ? "Good Morning"
     : "Good Night";
 ```
 
 ```
-String greeting = "";          // AVOID
+String greeting = "";      // AVOID
 if (isMorning) {
     greeting = "Good Morning";
 } else {
